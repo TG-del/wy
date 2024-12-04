@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>荆州旅游网站</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>我的家乡——荆州</h1>
+    </header>
+    <nav>
+		<a href="index.html">主页</a>
+        <a href="travel.html">旅游景点</a>
+        <a href="park.html">主题公园</a>
+        <a href="scenery.html">自然风光</a>
+		<a href="delicious.html">美食介绍</a>
+        <a href="#" onclick="showPopup()">我的小秘密</a>
+    </nav>
+    <div class="banner">
+        <div class="banner-ad">
+            <h2>欢迎来到荆州！</h2>
+            <p>探索荆州的美丽景点</p>
+      </div>
+    <img src="image/9BD0C4000D69BE1003ECB5A0F2638149.jpg" width="1440" height="200" alt=""/>    </div>
+   
+        <div class="attraction">
+             <h1>景点介绍：</h1>
+			 <h2>主题公园类</h2>
+		  <h3>1.荆州方特东方神画</h3>
+            <img src="image/9146AAAA8E3DFFE65D9F152F1112E69B.jpg" alt="洪湖湿地" width="1280" height="720" style="display: block; margin: 0 auto;">
+            <p>&nbsp;&nbsp;&nbsp;<span style="font-weight: bold">基本情况：</span>荆州方特东方神画位于湖北省荆州市荆州区纪南生态文化旅游区方特路1号，是一座大型高科技主题乐园。<br> 
+              <span style="font-weight: bold">主题与文化：</span>以中华历史文化传承为主题，融合荆楚文化特色，通过激光多媒体、立体效果、微缩实景、真人秀等表现手法，展现华夏五千年文明及荆楚文化魅力。<br> 
+              <span style="font-weight: bold">主题区与项目：</span> 穿越古今：有以跟踪式互动电影为亮点的轨道车项目《女娲补天》，游客跟随女娲经历炼石补天的历险。<br> 
+              <span style="font-weight: bold">熊出没嘉年华：</span>包含主打亲子合家欢的4D环境剧场项目《熊出没剧场》，与熊大、熊二一起在光头强家中展开冒险 。<br> 
+              <span style="font-weight: bold">荆楚大地：</span>展现荆楚文化魅力的大型真人演艺项目《楚乐》，呈现楚人浪漫与编钟文化的精彩 。<br> 
+              <span style="font-weight: bold">风云华夏：</span>如巨幕立体影院项目《九州神韵》，以华夏五千年历史为背景，演绎历史的坎坷波折与兴盛繁荣  。<br> 
+              <span style="font-weight: bold">混沌初开：</span>有讲述三国故事的无轨寻迹车项目《火烧赤壁》。<br> 
+              <span style="font-weight: bold">游乐设施与体验：</span>包含11个大型室内主题项目、27个室外互动式游乐项目及3个无动力体验区，还有200多项休闲景观项目。室内项目运用先进科技，如《伴你飞翔》是大型悬挂式球幕影院，体验凌空飞翔感受。室外项目中，《马戏大狂欢》是悬挂式过山车，带来高速刺激体验。<br> 
+              <span style="font-weight: bold">园区活动：</span>不定期举办各种特色活动，如傣族泼水狂欢、梦幻嬉水大巡游、花车巡游、电音节、烟花秀等。<br>
+          <span style="font-weight: bold">&nbsp;&nbsp;&nbsp;配套设施：</span>园内设有餐厅、商店等配套设施，满足游客饮食购物需求 。园外设有停车场，交通便利，乘坐公交22/42路可直达。 </p>
+      </div>
+	<footer>
+        <p>&copy;文化产业管理网页设计结课作业</p>
+    </footer>
+
+	
+    <!-- 弹出 -->
+    <div id="myPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>登录</h2>
+            <form onsubmit="checkLogin(); return false;">
+                <label for="username">用户名:</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="password">密码:</label><br>
+                <input type="password" id="password" name="password"><br><br>
+                <input type="submit" value="登录" class="login-button">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

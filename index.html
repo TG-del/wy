@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>荆州旅游网站</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>我的家乡——荆州</h1>
+    </header>
+    <nav>
+		<a href="index.html">主页</a>
+        <a href="travel.html">旅游景点</a>
+        <a href="park.html">主题公园</a>
+        <a href="scenery.html">自然风光</a>
+		<a href="delicious.html">美食介绍</a>
+        <a href="#" onclick="showPopup()">我的小秘密</a>
+    </nav>
+    <div class="banner">
+        <div class="banner-ad">
+            <h2>欢迎来到荆州！</h2>
+            <p>探索荆州的美丽景点</p>
+        </div>
+    <img src="image/9BD0C4000D69BE1003ECB5A0F2638149.jpg" width="1440" height="200" alt=""/>    </div>
+    <div class="content" id="attractions">
+        <h2>我的家乡</h2>
+        <div class="attraction">
+            <h3>荆州简介：</h3>
+            <img src="image/93A22422CEB075B046031DD403A69451.jpg" alt="荆州古城" width="500" height="300">
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;荆州，古称“江陵”，是湖北省地级市，位于湖北省中南部、长江中游、江汉平原腹地，东依武汉市汉南区，东南隔江与咸宁市嘉鱼县、赤壁市相望；南滨江与湖南省岳阳市为邻，与益阳市、常德市接壤；西连宜昌市的当阳市、枝江市、宜都市、五峰县；北接荆门市、潜江市、仙桃市。辖区东西最大横距约274.8千米，南北最大纵距约130.2千米，夹江呈带状分布。长江自西向东横贯全市，境内全长483千米。早在五六千年前，人类就在这里创造了大溪文化等原始文化。公元前689年，楚文王建都于郢（现荆州市荆州区纪南城），历20个楚王，定都长达411年，创造了堪与古希腊雅典文化相媲美的楚文化。三国时期，荆州为群雄逐鹿之地，境内三国文化遗存遍布。荆州自古以来就是长江中游文化中心，是楚文化发祥地、三国文化荟萃地、红色文化富集地、长江文化展示地。
+          </p>
+	   </div>
+	</div>
+			
+			<hr align="center" width="100%" size="3" color="#40AED9">
+
+<div class="content" id="about">
+        <h2>关于我们</h2>
+        <p>荆州旅游网站致力于推广荆州的文化和旅游资源，为游客提供最新的旅游资讯和服务。</p>
+    </div>
+    <div class="content" id="contact">
+        <h2>联系我们</h2>
+        <p>邮箱: contact@jingzhou.com</p>
+        <p>电话: 123-456-7890</p>
+    </div>
+    <footer>
+        <p>&copy;文化产业管理网页设计结课作业</p>
+    </footer>
+
+    <!-- 弹出 -->
+    <div id="myPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>登录</h2>
+            <form onsubmit="checkLogin(); return false;">
+                <label for="username">用户名:</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="password">密码:</label><br>
+                <input type="password" id="password" name="password"><br><br>
+                <input type="submit" value="登录" class="login-button">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
