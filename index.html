@@ -1,0 +1,104 @@
+<!DOCTYPE html><html data-framework="react" data-version="12" data-localstorage-bridge="kv-v1"><head><script>window.__flashAppLoadTraceId = "flash-app-load-1792926778011-vz995sey";</script>
+<script>
+console.log('[FLASH APP] boot');
+(function() {
+    const rootStyle = document.documentElement.style;
+    rootStyle.setProperty('--flash-app-safe-area-inset-top', '0px');
+    rootStyle.setProperty('--flash-app-safe-area-inset-right', '0px');
+    rootStyle.setProperty('--flash-app-safe-area-inset-bottom', '0px');
+    rootStyle.setProperty('--flash-app-safe-area-inset-left', '0px');
+    rootStyle.setProperty('--flash-app-safe-top', '0px');
+})();
+window.__fullscreen = false;
+window.__flashAppSafeAreaInsets = {
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
+};
+window.addEventListener('message', function(event) {
+    const data = event && event.data;
+    console.log('[APP LOADER][MSG] [main] 收到 message, type=', data.type, 'data=', event.data)
+    if (!data) {
+        return;
+    }
+    if (data.type === 'FLASH_APP_SAFE_AREA') {
+        const insets = data.insets;
+        const isValidInset = function(value) {
+            return typeof value === 'number' && Number.isFinite(value) && value >= 0;
+        };
+        if (
+            insets &&
+            typeof insets === 'object' &&
+            !Array.isArray(insets) &&
+            isValidInset(insets.top) &&
+            isValidInset(insets.right) &&
+            isValidInset(insets.bottom) &&
+            isValidInset(insets.left)
+        ) {
+            window.__flashAppSafeAreaInsets = {
+                top: insets.top,
+                right: insets.right,
+                bottom: insets.bottom,
+                left: insets.left,
+            };
+        }
+        return;
+    }
+    if (data.type === 'FLASH_APP_FULLSCREEN') {
+        if (typeof data.value === 'boolean') {
+            window.__fullscreen = data.value;
+            return;
+        }
+        if (data.action === 'zoomin') {
+            window.__fullscreen = true;
+            return;
+        }
+        if (data.action === 'zoomout') {
+            window.__fullscreen = false;
+            return;
+        }
+    }
+});
+</script>
+<meta name="flash-app-html-url" content="https://render.lingguangcontent.com/p/lingguang/0a-6adde32e2cd1f5a715afe88f/index.html"><script>window.__flashAppLocalStorageBridgeConfig = {"enabled":true,"mode":"kv-v1","storageKey":"__flash_app_localstorage_bridge_snapshot_v1__","storageNamespace":"flashapp-f32c57607bcf42c2","artifactId":"flashapp-f32c57607bcf42c2","artifactVersion":"4","htmlUrl":"https://render.lingguangcontent.com/p/lingguang/0a-6adde32e2cd1f5a715afe88f/index.html","snapshot":{}};</script>
+    <meta name="asap-build-time" content="2026-10-25T11:08:22.766Z">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>矿山刷新计时 - 灵光闪应用</title>
+    <script>window.injectInfo = { env: "PROD" };</script><script>window.publicPath = "https://render.lingguangobjects.com/p/yuyan/200031800021779330/";</script><script id="app-manifest" type="application/json">
+{"navigationBar":{"visible":true,"title":"矿山刷新计时","backgroundColor":"#F7F5F1","foregroundColor":"#1C1917"},"localStorage":false}
+    </script>
+    <base href="https://render.lingguangobjects.com/p/yuyan/200031800021779330/">
+    <link href="https://gw.alipayobjects.com/render/p/yuyan/180023180003946312/material-icons.css" rel="stylesheet" crossorigin="anonymous">
+    
+<script type="module" src="https://render.lingguangobjects.com/p/yuyan/200031800020106492/base/base.js"></script>
+<script type="module" src="https://gw.alipayobjects.com/render/p/yuyan/180023180042934971/AudioContext2.js"></script>
+<script type="module" src="https://render.lingguangobjects.com/p/yuyan/200031800015964669/voice-tts-simple.js"></script>
+
+    <script type="module" crossorigin="" src="./assets/index-C9yi_yuh.js"></script>
+    <link rel="stylesheet" crossorigin="" href="./assets/index-bZme8FCD.css">
+      <!-- asap-vite-contract:a4167c51ba36d6fb9d742332 -->
+    <meta name="asap-vite-contract" content="a4167c51ba36d6fb9d742332">
+  <script>
+    window.artifactId = "flashapp-f32c57607bcf42c2";
+    window.artifactVersion = "4";
+    window.trace_id = "2193b99f17929264489581904e4dad";
+</script>
+<meta http-equiv="Content-Security-Policy" content="
+  script-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: *.alipay.com *.alipayobjects.com  *.amap.com *.lingguang.com *.lingguangcontent.com *.lingguangobjects.com;
+  frame-src 'self' data: blob: *.alipay.com *.alipayobjects.com *.amap.com *.lingguang.com *.lingguangcontent.com *.lingguangobjects.com;
+  connect-src 'self' data: blob: *.alipay.com *.alipayobjects.com  *.amap.com *.lingguang.com *.lingguangcontent.com *.lingguangobjects.com *.antgroup-inc.cn *.antgroup.com wss://*.antgroup.com;
+  child-src 'self' data: blob: *.alipay.com *.alipayobjects.com  *.amap.com *.lingguang.com *.lingguangcontent.com *.lingguangobjects.com;
+  object-src 'self' data: blob: *.alipay.com *.alipayobjects.com  *.amap.com *.lingguang.com *.lingguangcontent.com *.lingguangobjects.com;
+  base-uri 'self' *.alipay.com *.alipayobjects.com *.amap.com *.lingguang.com *.lingguangcontent.com *.lingguangobjects.com;
+  form-action 'none';
+  upgrade-insecure-requests;
+">
+
+</head>
+  <body>
+    <div id="root"></div>
+  
+
+</body></html>
